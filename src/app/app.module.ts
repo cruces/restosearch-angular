@@ -14,6 +14,9 @@ import {FooterComponent, HeaderComponent, SharedModule} from './shared';
 import {RestaurantsComponent} from './restaurants/restaurants.component';
 import {HomeComponent} from './home/home.component';
 
+import { InfiniteScrollModule } from 'angular2-infinite-scroll';
+
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -28,7 +31,9 @@ import {HomeComponent} from './home/home.component';
         BrowserModule,
         AppRoutingModule,
         HttpModule,
-        SharedModule
+        SharedModule,
+        InfiniteScrollModule
+
     ],
     bootstrap: [AppComponent],
     providers: [RestaurantService, CategoryService]

@@ -41,6 +41,7 @@
     "@angular/router": "3.4.4",
     "@angular/upgrade": "2.4.4",
     "angular2-in-memory-web-api": "0.0.21",
+    "angular2-infinite-scroll": "^0.3.5",
     "bootstrap": "^4.1",
     "bootswatch": "^4.1.1",
     "core-js": "^2.4.1",
