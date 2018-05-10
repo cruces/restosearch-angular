@@ -1,0 +1,7 @@
+<div *ngIf="restaurant" class="container-fluid">
+    <h1>{{restaurant.name}} - {{restaurant.user_rating.aggregate_rating}} {{restaurant.user_rating.rating_text}}</h1>
+    <p>{{restaurant.location.locality}} - {{restaurant.location.city}}</p>
+    <p>{{restaurant.phone_numbers}}</p>
+</div>
+
+<div id="googleMap" style="width:500px;height:380px;"></div>

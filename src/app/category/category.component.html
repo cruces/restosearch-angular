@@ -1,0 +1,4 @@
+<div *ngIf="categories" class="btn-group" role="group" aria-label="Restaurants categories">
+    <button *ngFor="let category of categories" type="button" class="btn btn-secondary">{{category.categories.name}}
+    </button>
+</div>
