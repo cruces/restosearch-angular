@@ -1,1 +1,89 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'assets/fonts/font-awesome/css/fontawesome-all.css';
+
+$color-primary: #795548;
+$color-primary-dark: #5D4037;
+$color-accent: #4BAE4F;
+$color-white: #FFFFFF;
+$color-transparent: #00000000;
+$color-light-gray: #b7b5b5;
+$color-accent-dark: #39833c;
+$color-gray-transparent: #6f252121;
+$color-gray-lighter: #f1f1f1;
+$color-gray: #666666;
+$color-dark-gray: #202020;
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('/assets/fonts/roboto/Roboto-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Acme-Regular';
+  src: url('/assets/fonts/acme/Acme-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Shadows-Into-Light';
+  src: url('/assets/fonts/shadows-into-light/ShadowsIntoLight.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/poppins/Poppins-Regular.ttf');
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  background-color: $color-gray-lighter;
+}
+
+a {
+  color: $color-accent;
+}
+
+.btn {
+  padding: .5rem 1.25rem;
+}
+
+.bg-primary {
+  background-color: $color-primary !important;
+}
+
+.btn.btn-primary {
+  background-color: $color-accent;
+  border-color: $color-accent;
+  box-shadow: 0.125rem 0.1875rem 0.9375rem rgba(0, 0, 0, .15);
+
+  &:hover {
+    background-color: $color-accent-dark;
+    border-color: $color-accent-dark;
+  }
+}
+
+.section-container {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  h2 {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 35px;
+  }
+
+  p {
+    color: $color-gray;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+}
+
+@media (min-width: 992px) {
+  .section-container {
+    h2 {
+      font-size: 26px;
+      text-align: center;
+    }
+  }
+}
+

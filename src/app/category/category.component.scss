@@ -1,0 +1,29 @@
+@import '../../styles';
+
+.category-item {
+  margin-bottom: 15px;
+
+  i {
+    display: inline-block;
+    font-size: 22px;
+    padding: 8px;
+    background: $color-accent;
+    border-radius: 50%;
+    color: $color-white;
+    cursor: pointer;
+    transition: .3s ease;
+  }
+
+  label {
+    margin-left: 10px;
+    vertical-align: middle;
+    cursor: pointer;
+    color: $color-gray;
+  }
+
+  &:hover {
+    i {
+      background: $color-accent-dark;
+    }
+  }
+}

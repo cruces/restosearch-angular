@@ -1,0 +1,45 @@
+@import '../../styles';
+
+/** Header styles **/
+.header {
+  background: url("../../assets/header-backgroud.jpg") center;
+  background-size: cover;
+  height: auto;
+}
+
+.header-content {
+  position: relative;
+  padding: 100px 15px 100px;
+  width: 100%;
+  color: $color-gray-lighter;
+
+  h1 {
+    font-family: Acme-Regular, sans-serif;
+    font-size: 4rem;
+  }
+
+  span {
+    font-family: Shadows-Into-Light, sans-serif;
+  }
+}
+
+@media (min-width: 768px){
+  .header {
+    height: 100vh;
+  }
+
+  .header-content {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding: 0 50px;
+
+    .header-content-inner {
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+<div class="container-fluid" infinite-scroll
+     debounce
+     [infiniteScrollDistance]="scrollDistance"
+     [infiniteScrollUpDistance]="scrollUpDistance"
+     [infiniteScrollThrottle]="throttle"
+     (scrolled)="onScrollDown()">
+    <input (keyup)="searchTerm$.next($event.target.value)">
+
+    <div *ngIf="restaurantList" class="row">
+        <div *ngFor="let restaurant of restaurantList" class="col-sm-6 col-md-5 col-lg-4">
+            <div class="card">
+                <img *ngIf="!restaurant.restaurant.featured_image" class="card-img-top"
+                     src="https://image.freepik.com/free-vector/fast-food-pattern_1108-194.jpg" alt="Card image cap">
+                <img *ngIf="restaurant.restaurant.featured_image" class="card-img-top"
+                     src="{{restaurant.restaurant.featured_image}}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{restaurant.restaurant.name}}</h5>
+                    <p class="card-text">{{restaurant.restaurant.location.locality}} -
+                        {{restaurant.restaurant.location.city}}</p>
+                    <a routerLink="/restaurant/{{restaurant.restaurant.id}}" class="btn btn-primary">Go somewhere</a>
+                    <a (click)="addToFavorites(restaurant.restaurant)" class="btn btn-primary">Add to favorites</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

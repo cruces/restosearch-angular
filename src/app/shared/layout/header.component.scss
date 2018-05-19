@@ -1,0 +1,56 @@
+@import '../../../styles';
+
+/** Navbar custom styles **/
+
+.navbar {
+  background-color: $color-primary;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  position: fixed;
+  width: 100%;
+}
+
+.navbar-brand {
+  font-family: Acme-Regular, sans-serif;
+  color: $color-white;
+
+  &:hover {
+    color: $color-white;
+  }
+
+  .logo {
+    margin-right: 8px;
+    vertical-align: top;
+    width: 25px;
+  }
+
+  span {
+    font-family: Shadows-Into-Light, sans-serif;
+  }
+
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: $color-white;
+}
+
+.mr-auto, .mx-auto {
+  margin-left: auto !important;
+  margin-right: 0 !important;
+}
+
+@media (min-width: 992px) {
+
+  .navbar.transparent {
+    background-color: transparent;
+    transition: .3s ease;
+
+    &.small {
+      background-color: $color-primary;
+      box-shadow: 0 1px 8px rgba(0, 0, 0, .3);
+      -webkit-box-shadow: 0 1px 8px rgba(0, 0, 0, .3);
+      font-size: 100%;
+    }
+
+  }
+}

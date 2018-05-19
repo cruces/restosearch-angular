@@ -27,15 +27,15 @@ export class RestaurantComponent implements OnInit {
             this.restaurantService.getRestaurant(this.id)
                 .subscribe(restaurant => {
                     this.restaurant = restaurant;
-                    const location = {lat: Number(restaurant.location.latitude),
+                    let location = {lat: Number(restaurant.location.latitude),
                         lng: Number(restaurant.location.longitude)};
-                    const mapProp = {
+                    let mapProp = {
                         center: new google.maps.LatLng(location),
                         zoom: 16,
                         mapTypeId: google.maps.MapTypeId.ROADMAP
                     };
-                    const map = new google.maps.Map(document.getElementById('googleMap'), mapProp);
-                    const marker = new google.maps.Marker({
+                    let map = new google.maps.Map(document.getElementById('googleMap'), mapProp);
+                    let marker = new google.maps.Marker({
                         position: location,
                         map: map
                     });

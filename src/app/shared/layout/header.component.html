@@ -1,15 +1,23 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">RestoSearch</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light transparent" [ngClass]="{'small': isScrolled}">
+    <a class="navbar-brand" href=""><img class="logo"
+                                         src="../../../assets/ic_logo_restosearch.png"/>Resto<span>Search</span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <!--<a class="nav-link" routerLink="/restaurant">Restaurant</a>-->
-      </li>
-    </ul>
-  </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item" routerLinkActive="active" *ngIf="auth.isAuthenticated()">
+                <a class="nav-link" routerLink="/profile">Profile</a>
+            </li>
+            <li class="nav-item" routerLinkActive="active" *ngIf="auth.isAuthenticated()">
+                <a class="nav-link" routerLink="/favorites">My favorites</a>
+            </li>
+            <li class="nav-item">
+                <a (click)="login()" *ngIf="!auth.isAuthenticated()" class="nav-link btn btn-primary">Login</a>
+                <a (click)="logout()" *ngIf="auth.isAuthenticated()" class="nav-link btn btn-primary">Logout</a>
+            </li>
+        </ul>
+    </div>
 </nav>

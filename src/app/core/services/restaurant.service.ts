@@ -22,24 +22,24 @@ export class RestaurantService {
 
     /** GET restaurant by id */
     getRestaurant(id: number): Observable<RestaurantModel> {
-        const url = `${this.mainUrl}restaurant?res_id=${id}`;
-        return this.http.get(url, this.headers)
+        const URL = `${this.mainUrl}restaurant?res_id=${id}`;
+        return this.http.get(URL, this.headers)
             .map((res: Response) => res.json())
             .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
     }
 
     /** GET all restaurants */
     getRestautants(start: number, q: string): Observable<RestaurantModel[]> {
-        const url = `${this.mainUrl}search?q=${q}&start=${start}&count=10&category=${this.categoryId}`;
-        return this.http.get(url, this.headers)
+        const URL = `${this.mainUrl}search?q=${q}&start=${start}&count=10&category=${this.categoryId}`;
+        return this.http.get(URL, this.headers)
             .map((res: Response) => res.json()['restaurants'])
             .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
     }
 
     /** GET all restaurants */
     getRestautantsSearch(start: number, q: string): Observable<RestaurantModel[]> {
-        const url = `${this.mainUrl}search?q=${q}&start=${start}&count=10&category=${this.categoryId}`;
-        return this.http.get(url, this.headers)
+        const URL = `${this.mainUrl}search?q=${q}&start=${start}&count=10&category=${this.categoryId}`;
+        return this.http.get(URL, this.headers)
             .map((res: Response) => res.json()['restaurants'])
             .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
     }

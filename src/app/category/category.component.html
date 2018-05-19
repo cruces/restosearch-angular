@@ -1,4 +1,12 @@
-<div *ngIf="categories" class="btn-group" role="group" aria-label="Restaurants categories">
-    <button *ngFor="let category of categories" type="button" class="btn btn-secondary">{{category.categories.name}}
-    </button>
-</div>
+<section id="categories" class="section-container">
+    <div class="container">
+        <h2>Types of restaurants</h2>
+        <p>Also you can find your perfect place choosing the type of restaurant that you like</p>
+        <div *ngIf="categories" class="row categories-content">
+            <div *ngFor="let category of categories" class="col-md-3 category-item">
+                <i class="fa fa-utensils"></i>
+                <label>{{category.categories.name}}</label>
+            </div>
+        </div>
+    </div>
+</section>
